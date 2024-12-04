@@ -69,70 +69,70 @@ def test_setup(request):
 
 
 # HTML Reports
-def pytest_html_report_title(report):
-    report.title = "Docusign Automation Test Report"
+# def pytest_html_report_title(report):
+#     report.title = "Docusign Automation Test Report"
 
 
-@pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item):
-    pytest_html = item.config.pluginmanager.getplugin("html")
-    outcome = yield
-    report = outcome.get_result()
-    extra = getattr(report, 'extra', [])
-    if report.when == 'call':
-        xfail = hasattr(report, 'wasxfail')
-        if (report.skipped and xfail) or (report.failed and not xfail):
-            driver = getattr(item.cls, 'driver', None)
-            if driver:
-                util_test = Util_Test(driver)
-                screenshots_dir = 'screenshots'
-                if not os.path.exists(screenshots_dir):
-                    os.makedirs(screenshots_dir)
-                try:
-                    screenshot_path = util_test.getscreenshot("Screenshot_while_failed.png")
-                    Util_Test.add_failed_message_doc(Util_Test.test_name)
-                    if os.path.exists(screenshot_path):
-                        with open(screenshot_path, "rb") as image_file:
-                            encoded_string = base64.b64encode(image_file.read()).decode("utf-8")
-                            extra_html = (
-                                f'<div style="float: right; margin-left: 20px;">'
-                                f'<img src="data:image/png;base64,{encoded_string}" alt="screenshot" '
-                                f'style="width:200px; height:150px;" onclick="window.open(this.src)" align="right"/></div>'
-                            )
-                            extra.append(pytest_html.extras.html(extra_html))
-                except NoSuchWindowException:
-                    extra_html = (
-                        '<div style="float: right; margin-left: 20px;">'
-                        '<p>Screenshot could not be captured as the window was closed.</p>'
-                        '</div>'
-                    )
-                    extra.append(pytest_html.extras.html(extra_html))
-    report.extra = extra
+# @pytest.hookimpl(hookwrapper=True)
+# def pytest_runtest_makereport(item):
+#     pytest_html = item.config.pluginmanager.getplugin("html")
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#     if report.when == 'call':
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             driver = getattr(item.cls, 'driver', None)
+#             if driver:
+#                 util_test = Util_Test(driver)
+#                 screenshots_dir = 'screenshots'
+#                 if not os.path.exists(screenshots_dir):
+#                     os.makedirs(screenshots_dir)
+#                 try:
+#                     screenshot_path = util_test.getscreenshot("Screenshot_while_failed.png")
+#                     Util_Test.add_failed_message_doc(Util_Test.test_name)
+#                     if os.path.exists(screenshot_path):
+#                         with open(screenshot_path, "rb") as image_file:
+#                             encoded_string = base64.b64encode(image_file.read()).decode("utf-8")
+#                             extra_html = (
+#                                 f'<div style="float: right; margin-left: 20px;">'
+#                                 f'<img src="data:image/png;base64,{encoded_string}" alt="screenshot" '
+#                                 f'style="width:200px; height:150px;" onclick="window.open(this.src)" align="right"/></div>'
+#                             )
+#                             extra.append(pytest_html.extras.html(extra_html))
+#                 except NoSuchWindowException:
+#                     extra_html = (
+#                         '<div style="float: right; margin-left: 20px;">'
+#                         '<p>Screenshot could not be captured as the window was closed.</p>'
+#                         '</div>'
+#                     )
+#                     extra.append(pytest_html.extras.html(extra_html))
+#     report.extra = extra
 
 
-# It is the Hook to add the logo in the screenshot
-@pytest.hookimpl(tryfirst=True)
-def pytest_html_results_summary(prefix):
-    logo_path = os.path.join(os.path.dirname(__file__), 'reports', constants.logo_path)
-    if os.path.exists(logo_path):
-        prefix.extend([html.div(
-            html.img(src=logo_path, alt="Logo", style="position:absolute;top:20px;right:10px;padding:40px", height="50",
-                     width="100")
-        )])
+# # It is the Hook to add the logo in the screenshot
+# @pytest.hookimpl(tryfirst=True)
+# def pytest_html_results_summary(prefix):
+#     logo_path = os.path.join(os.path.dirname(__file__), 'reports', constants.logo_path)
+#     if os.path.exists(logo_path):
+#         prefix.extend([html.div(
+#             html.img(src=logo_path, alt="Logo", style="position:absolute;top:20px;right:10px;padding:40px", height="50",
+#                      width="100")
+#         )])
 
 
-# It is the hook for adding environment info to html reports
-def pytest_configure(config):
-    config.metadata['Project Name'] = 'DocuSign'
-    config.metadata['Run User'] = os.environ.get('TriggeringUser', 'Unknown')
-    config.metadata['UTC Time'] = datetime.now(pytz.UTC)
+# # It is the hook for adding environment info to html reports
+# def pytest_configure(config):
+#     config.metadata['Project Name'] = 'DocuSign'
+#     config.metadata['Run User'] = os.environ.get('TriggeringUser', 'Unknown')
+#     config.metadata['UTC Time'] = datetime.now(pytz.UTC)
 
 
-# It is Hook for delete/modify environment info to HTML report
-def pytest_metadata(metadata):
-    metadata.pop("Packages", None)
-    metadata.pop("Plugins", None)
-    metadata.pop("Python", None)
+# # It is Hook for delete/modify environment info to HTML report
+# def pytest_metadata(metadata):
+#     metadata.pop("Packages", None)
+#     metadata.pop("Plugins", None)
+#     metadata.pop("Python", None)
 
 
 def pytest_terminal_summary(terminalreporter):
