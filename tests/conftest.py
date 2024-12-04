@@ -123,9 +123,9 @@ def pytest_html_results_summary(prefix):
 
 # It is the hook for adding environment info to html reports
 def pytest_configure(config):
-    config._metadata['Project Name'] = 'DocuSign'
-    config._metadata['Run User'] = os.environ.get('TriggeringUser', 'Unknown')
-    config._metadata['UTC Time'] = datetime.now(pytz.UTC)
+    config.metadata['Project Name'] = 'DocuSign'
+    config.metadata['Run User'] = os.environ.get('TriggeringUser', 'Unknown')
+    config.metadata['UTC Time'] = datetime.now(pytz.UTC)
 
 
 # It is Hook for delete/modify environment info to HTML report
