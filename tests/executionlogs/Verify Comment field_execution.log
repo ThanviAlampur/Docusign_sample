@@ -1,0 +1,31 @@
+2024-11-04 10:58:28 INFO Verify comment field script execution - Started 
+2024-11-04 10:59:06 INFO Logged in to the DocuSign Application successfully 
+2024-11-04 10:59:21 INFO Validated the home page 
+2024-11-04 10:59:21 INFO Clicked on the start button to open the upload envelop section. 
+2024-11-04 10:59:38 INFO Uploaded the document as a sender 
+2024-11-04 10:59:41 INFO Added the recipient details. 
+2024-11-04 10:59:41 INFO Clicked on the next button 
+2024-11-04 10:59:47 INFO Dragged and dropped the signature tag for recipient 
+2024-11-04 10:59:52 INFO Dragged and dropped the comment field for recipient 
+2024-11-04 10:59:59 INFO Clicked on the send button to send the document. 
+2024-11-04 11:00:05 INFO Logged out from the sender after sending the document. 
+2024-11-04 11:00:13 INFO Logged in as the recipient 1, i.e., signer 1. 
+2024-11-04 11:00:30 INFO Validated the home page. 
+2024-11-04 11:00:46 INFO Navigated to the document that was sent by the sender. 
+2024-11-04 11:00:47 INFO Clicked on the primary sign button. 
+2024-11-04 11:01:03 INFO Completed the authentication before signing. 
+2024-11-04 11:01:03 INFO Clicked on the continue button 
+2024-11-04 11:01:04 INFO Clicked on the Secondary sign button. 
+2024-11-04 11:01:05 INFO Selected the reason for signing from the dropdown. 
+2024-11-04 11:01:07 INFO Clicked on the continue button for signing. 
+2024-11-04 11:01:14 INFO Completed the final authentication step before signing 
+2024-11-04 11:01:41 INFO Clicked on the 'Finish' button to complete sign. 
+2024-11-04 11:01:41 INFO Validated the required label is displayed. 
+2024-11-04 11:01:42 INFO Added the comment 
+2024-11-04 11:02:00 INFO Clicked on the 'Finish' button to complete sign. 
+2024-11-04 11:02:06 INFO Logged out from the signer. 
+2024-11-04 11:02:17 INFO Logged in as the recipient 1, i.e., signer 1 again. 
+2024-11-04 11:02:32 INFO Validated the home page. 
+2024-11-04 11:02:47 INFO Navigated to the required document. 
+2024-11-04 11:03:14 INFO Downloaded the document. 
+2024-11-04 11:03:15 INFO Validated the comment message 

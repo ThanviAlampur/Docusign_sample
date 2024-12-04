@@ -1,0 +1,65 @@
+2024-11-04 12:01:30 INFO Send envelop and approve script execution - Started 
+2024-11-04 12:01:53 INFO Logged in to the DocuSign Application successfully 
+2024-11-04 12:02:08 INFO Validated the home page 
+2024-11-04 12:02:08 INFO Clicked on the start button to open the upload envelop section. 
+2024-11-04 12:02:25 INFO Uploaded the document-1 as a sender 
+2024-11-04 12:02:30 INFO Uploaded the document-2 as a sender 
+2024-11-04 12:02:33 INFO Adding recipient-1 and other details 
+2024-11-04 12:02:38 INFO Adding recipient-2 and other details 
+2024-11-04 12:02:38 INFO Clicked on the next button 
+2024-11-04 12:02:43 INFO Dragged and dropped the signature tag for recipient 1 
+2024-11-04 12:02:43 INFO Selected the Recipient-2 from drop down 
+2024-11-04 12:02:47 INFO Dragged and dropped the signature tag for recipient 2 
+2024-11-04 12:02:48 INFO Scrolled down to the next envelop 
+2024-11-04 12:02:48 INFO Selected the Recipient 1 from the drop down 
+2024-11-04 12:02:52 INFO Dragged and dropped the signature tag for recipient 1 
+2024-11-04 12:02:52 INFO Selected the Recipient2 from the drop down 
+2024-11-04 12:02:56 INFO Dragged and dropped the signature tag for recipient 2 
+2024-11-04 12:03:06 INFO clicked on the send button 
+2024-11-04 12:03:23 INFO Navigated to the document 
+2024-11-04 12:03:23 INFO Validated the buttons i.e correct, move, resend and more options are displayed 
+2024-11-04 12:03:23 INFO Clicked on the correct button 
+2024-11-04 12:03:28 INFO Clicked on the set signing order checkbox 
+2024-11-04 12:03:31 INFO Changed the Routing order 
+2024-11-04 12:03:31 INFO Clicked on the next button 
+2024-11-04 12:03:34 INFO Clicked on the correct button to Resend the document 
+2024-11-04 12:03:57 INFO Navigated to the envelope 
+2024-11-04 12:03:57 INFO Validated the recipients Routed order 
+2024-11-04 12:04:04 INFO The sender is Logged out from the application 
+2024-11-04 12:04:17 INFO Recipient-2 logged into the application 
+2024-11-04 12:04:34 INFO Validated the home page. 
+2024-11-04 12:04:49 INFO Navigated to the document 
+2024-11-04 12:04:50 INFO Clicked on the Primary sign button 
+2024-11-04 12:05:04 INFO Completed the authentication for signing 
+2024-11-04 12:05:04 INFO Validated and Clicked on the 'Continue' button for signing 
+2024-11-04 12:05:06 INFO Clicked on the signing tag in first document. 
+2024-11-04 12:05:06 INFO Selected signing reason from drop down 
+2024-11-04 12:05:08 INFO Clicked on the 'Continue' button for completing the sign 
+2024-11-04 12:05:15 INFO Completed the final authentication process and signing. 
+2024-11-04 12:05:15 INFO Clicked on the signing tag in second document 
+2024-11-04 12:05:15 INFO Validated the options under reason for signing. 
+2024-11-04 12:05:15 INFO Selected the reason for signing from the dropdown. 
+2024-11-04 12:05:24 INFO Completed the final authentication process and signing 
+2024-11-04 12:05:45 INFO Clicked on the 'Finish' button. 
+2024-11-04 12:05:49 INFO Recipient-2 is logged out form the application 
+2024-11-04 12:06:01 INFO Recipient-1 logged in to the application 
+2024-11-04 12:06:32 INFO Navigated to the document 
+2024-11-04 12:06:32 INFO Clicked on the primary Sign button 
+2024-11-04 12:06:32 INFO Clicked on the 'Continue' button for signing 
+2024-11-04 12:06:41 INFO Clicked on the Sign Tag in first document. 
+2024-11-04 12:06:41 INFO Provided the Signing reason 
+2024-11-04 12:06:43 INFO Clicked on the continue button 
+2024-11-04 12:06:50 INFO Completed the authentication process and signing 
+2024-11-04 12:06:50 INFO Clicked on the Sign Tag in Second document 
+2024-11-04 12:06:50 INFO Provided the signing reason 
+2024-11-04 12:06:58 INFO Completed the Authentication process and signing 
+2024-11-04 12:07:16 INFO Clicked on the 'Finish' button. 
+2024-11-04 12:07:21 INFO Recipient-1 logged out from the application 
+2024-11-04 12:07:22 INFO Opened the Outlook URL. 
+2024-11-04 12:07:35 INFO THe sender logged into OutLook 
+2024-11-04 12:07:37 INFO Found and opened the desired mail 
+2024-11-04 12:07:37 INFO Verified the completed envelope notification 
+2024-11-04 12:07:37 INFO Send envelop and approve script execution - Completed 
+2024-11-04 12:07:44 INFO Sender Logged into the application 
+2024-11-04 12:07:57 INFO Navigated to the Envelope 
+2024-11-04 12:08:10 INFO Test  case failed 

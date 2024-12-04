@@ -1,0 +1,40 @@
+2024-11-04 10:52:45 INFO Logged in to the DocuSign Application successfully 
+2024-11-04 10:52:59 INFO Validated the home page 
+2024-11-04 10:53:00 INFO Clicked on the start button to open the upload envelop section. 
+2024-11-04 10:53:16 INFO Uploaded the document-1 as a sender 
+2024-11-04 10:53:21 INFO Uploaded the document-2 as a sender 
+2024-11-04 10:53:21 INFO Clicked on the set signing order checkbox 
+2024-11-04 10:53:24 INFO Added the recipient 1 details. 
+2024-11-04 10:53:29 INFO Added the recipient 2 details. 
+2024-11-04 10:53:29 INFO Clicked on the next button 
+2024-11-04 10:53:34 INFO Dragged and dropped the signature tag for recipient 1 
+2024-11-04 10:53:34 INFO Selected the Recipient2 from the drop down 
+2024-11-04 10:53:38 INFO Dragged and dropped the signature tag for recipient 2 
+2024-11-04 10:53:38 INFO Scrolled down to the next envelop 
+2024-11-04 10:53:42 INFO Dragged and dropped the signature tag for recipient 2 
+2024-11-04 10:53:42 INFO Selected the Recipient1 from the drop down 
+2024-11-04 10:53:46 INFO Dragged and dropped the signature tag for recipient 1 
+2024-11-04 10:53:53 INFO clicked on the send button 
+2024-11-04 10:54:08 INFO Navigated to the document 
+2024-11-04 10:54:08 INFO Clicked on the correct button 
+2024-11-04 10:54:13 INFO Validated that the envelop status is in correction state 
+2024-11-04 10:54:13 INFO Scrolled down to the recipients 
+2024-11-04 10:54:16 INFO Delete the recipient 
+2024-11-04 10:54:20 INFO Added the recipient 
+2024-11-04 10:54:20 INFO Clicked on the next button 
+2024-11-04 10:54:22 INFO Selected the Recipient2 from the drop down 
+2024-11-04 10:54:26 INFO Scrolled down to the next envelop 
+2024-11-04 10:54:32 INFO Clicked on the correct to resend the document button 
+2024-11-04 10:54:36 INFO Validated the success message 
+2024-11-04 10:54:53 INFO Navigated to the document 
+2024-11-04 10:54:54 INFO  
+2024-11-04 10:54:58 INFO  
+2024-11-04 10:55:01 INFO Updated the Recipient Action 
+2024-11-04 10:55:11 INFO Replace the document with new one 
+2024-11-04 10:55:15 INFO Uploaded the new document 
+2024-11-04 10:55:16 INFO Clicked on the next button 
+2024-11-04 10:55:17 INFO Scrolled down to the next envelop 
+2024-11-04 10:55:21 INFO Dragged and dropped the signature tag for recipient 1 
+2024-11-04 10:55:23 INFO Clicked on the resend button to send the document 
+2024-11-04 10:55:28 INFO Validated the success message 
+2024-11-04 10:55:33 INFO Log out as sender 

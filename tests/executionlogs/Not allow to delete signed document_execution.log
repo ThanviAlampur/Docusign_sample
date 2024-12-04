@@ -1,0 +1,31 @@
+2024-11-04 11:57:25 INFO not allow to delete sign document script execution - Started 
+2024-11-04 11:57:52 INFO Logged in to the DocuSign Application successfully 
+2024-11-04 11:58:06 INFO Validated the home page 
+2024-11-04 11:58:24 INFO Uploaded the document as a sender 
+2024-11-04 11:58:27 INFO Added the recipient 1 details. 
+2024-11-04 11:58:32 INFO Added the recipient 2 details. 
+2024-11-04 11:58:32 INFO Clicked on the next button 
+2024-11-04 11:58:38 INFO Dragged and dropped the signature tag for recipient 1 
+2024-11-04 11:58:38 INFO Selected the Recipient2 from the drop down 
+2024-11-04 11:58:42 INFO Dragged and dropped the signature tag for recipient 2  
+2024-11-04 11:58:50 INFO Clicked on the send button to send the document. 
+2024-11-04 11:58:58 INFO Logged out from the sender after sending the document. 
+2024-11-04 11:59:08 INFO Logged in as the recipient 1, i.e., signer 1. 
+2024-11-04 11:59:24 INFO Validated the home page. 
+2024-11-04 11:59:40 INFO Navigated to the document that was sent by the sender. 
+2024-11-04 11:59:40 INFO Clicked on the sign button. 
+2024-11-04 11:59:54 INFO Completed the authentication before signing. 
+2024-11-04 11:59:54 INFO Clicked on the 'Continue' button for signing and validated that the button was displayed. 
+2024-11-04 11:59:55 INFO Clicked on the signing tag button. 
+2024-11-04 11:59:55 INFO Validated the options under reason for signing. 
+2024-11-04 11:59:56 INFO Selected the reason for signing from the dropdown. 
+2024-11-04 11:59:58 INFO Clicked on the 'Continue' button for completing the sign. 
+2024-11-04 12:00:04 INFO Completed the final authentication step before signing. 
+2024-11-04 12:00:04 INFO Clicked on the 'Finish' button. 
+2024-11-04 12:00:27 INFO Logged out from the signer 1 after completing the process. 
+2024-11-04 12:00:36 INFO Logged in as the recipient 1, i.e., signer 1. 
+2024-11-04 12:00:52 INFO Validated the home page. 
+2024-11-04 12:01:07 INFO Navigated to the document that was sent by the sender. 
+2024-11-04 12:01:07 INFO Validated the options under document details page. 
+2024-11-04 12:01:07 INFO Clicked on the correct button. 
+2024-11-04 12:01:16 INFO Validated the options i.e Replace, Delete and lock buttons are disable. 

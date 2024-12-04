@@ -1,0 +1,17 @@
+2024-11-04 12:37:42 INFO Change signature Tag size script execution - Started 
+2024-11-04 12:38:24 INFO Logged in to the DocuSign Application successfully 
+2024-11-04 12:38:40 INFO Validated the home page 
+2024-11-04 12:38:40 INFO Clicked on the start button to open the upload envelop section. 
+2024-11-04 12:38:57 INFO Uploaded the document as a sender 
+2024-11-04 12:38:57 INFO Selected the set signing order checkbox 
+2024-11-04 12:39:00 INFO Added the recipient 1 details. 
+2024-11-04 12:39:05 INFO Added the recipient 2 details 
+2024-11-04 12:39:05 INFO Clicked on the next button 
+2024-11-04 12:39:10 INFO Dragged and dropped the signature tag for recipient 1 
+2024-11-04 12:39:11 INFO Validated the options under the signature section 
+2024-11-04 12:39:14 INFO Increased the signature tag size for recipient 1 
+2024-11-04 12:39:15 INFO Selected the Recipient2 from the drop down 
+2024-11-04 12:39:19 INFO Dragged and dropped the signature tag for recipient 2  
+2024-11-04 12:39:23 INFO Increased the signature tag size for recipient 2. 
+2024-11-04 12:39:23 INFO Change signature Tag size script execution - completed 
+2024-11-04 12:39:23 INFO Test  case failed 

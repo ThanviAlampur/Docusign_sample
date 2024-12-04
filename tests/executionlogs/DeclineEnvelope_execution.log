@@ -1,0 +1,21 @@
+2024-11-04 11:54:08 INFO Decline Envelope Script execution:STARTED 
+2024-11-04 11:54:42 INFO Logged in to the DocuSign Application successfully 
+2024-11-04 11:55:16 INFO uploaded the document 
+2024-11-04 11:55:16 INFO Selected the set signing order checkbox 
+2024-11-04 11:55:19 INFO Added the recipient 1 details. 
+2024-11-04 11:55:24 INFO Added the recipient 2 details. 
+2024-11-04 11:55:24 INFO Clicked on the next button 
+2024-11-04 11:55:30 INFO Dragged and dropped the signature tag for recipient 1 
+2024-11-04 11:55:34 INFO Dragged and dropped the signature tag for recipient 2 
+2024-11-04 11:55:41 INFO Successfully sent the document 
+2024-11-04 11:55:47 INFO The sender logged out from the application 
+2024-11-04 11:55:56 INFO signer1 logged into the application 
+2024-11-04 11:56:27 INFO Navigated to the envelope 
+2024-11-04 11:56:27 INFO clicked on Sign button 
+2024-11-04 11:56:41 INFO Completed the authentication process 
+2024-11-04 11:56:44 INFO Declined the Envelope with reason 
+2024-11-04 11:56:55 INFO validated envelope status as declined 
+2024-11-04 11:57:07 INFO sender logged in to the outlook application 
+2024-11-04 11:57:09 INFO selected the declined email 
+2024-11-04 11:57:09 INFO validated the envelope declined notification 
+2024-11-04 11:57:09 INFO Decline Envelope Script execution:COMPLETED 

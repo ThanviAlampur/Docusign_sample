@@ -1,0 +1,21 @@
+2024-11-04 10:56:12 INFO Logged in to the DocuSign Application successfully 
+2024-11-04 10:56:26 INFO Validated the home page 
+2024-11-04 10:56:27 INFO Clicked on the start button to open the upload envelop section. 
+2024-11-04 10:56:43 INFO Uploaded the document as a sender 
+2024-11-04 10:56:46 INFO Added the recipient 1 details. 
+2024-11-04 10:56:48 INFO Generated and added the access code 
+2024-11-04 10:56:48 INFO Clicked on the next button 
+2024-11-04 10:56:53 INFO Dragged and dropped the signature tag for recipient 1 
+2024-11-04 10:57:00 INFO Clicked on the send button 
+2024-11-04 10:57:06 INFO Logout as the sender 
+2024-11-04 10:57:19 INFO Login in to the outlook account 
+2024-11-04 10:57:22 INFO Navigated to the Respective email 
+2024-11-04 10:57:24 INFO Reviewed the document 
+2024-11-04 10:57:37 INFO Log in as the Sender 
+2024-11-04 10:57:45 INFO Validated the Access code 
+2024-11-04 10:57:45 INFO Clicked on the continue button 
+2024-11-04 10:57:45 INFO Clicked on the Sign Button 
+2024-11-04 10:57:45 INFO Selcted the sign reason 
+2024-11-04 10:57:54 INFO Completed the Authentication 
+2024-11-04 10:58:10 INFO Clicked on the Finish button 
+2024-11-04 10:58:14 INFO Logout as the sender 
