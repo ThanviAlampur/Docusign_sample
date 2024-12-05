@@ -54,6 +54,7 @@ def test_setup(request):
         options.set_preference("signon.management.page.os-authKeystore", False)
         options.set_preference("browser.download.dir", download_path)
         options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/pdf")
+        options.headless = True
         driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
     elif browser == "edge":
         download_path = os.path.abspath(constants.download_path)
