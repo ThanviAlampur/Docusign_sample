@@ -16,7 +16,8 @@ import pytest
 import os
 import pytz
 # from py.xml import html
-from pytest_html import HTMLReport
+from pytest_html import extras as html
+
 
 
 
