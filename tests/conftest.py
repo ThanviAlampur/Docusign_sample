@@ -15,7 +15,9 @@ from testData import constants
 import pytest
 import os
 import pytz
-from py.xml import html
+# from py.xml import html
+from pytest import html
+
 
 
 
