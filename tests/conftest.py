@@ -19,15 +19,8 @@ import pytz
 from pytest_html import extras as html
 
 
-
-
-
-
-
-
-
 def pytest_addoption(parser):
-    parser.addoption("--browser", action="store", default="firefox")
+    parser.addoption("--browser", action="store", default="chrome")
 
 
 @pytest.fixture(scope='class')
@@ -37,6 +30,10 @@ def test_setup(request):
     if browser == "chrome":
         download_path = os.path.abspath(constants.download_path)
         options = webdriver.ChromeOptions()
+        options.add_argument("--headless")  # Add headless mode for Chrome
+        options.add_argument("--disable-gpu")  # To avoid some headless issues
+        options.add_argument("--no-sandbox")  # Required for running in some environments
+        options.add_argument("--disable-dev-shm-usage")  # To prevent memory issues
         options.add_argument("disable-features=DownloadUI")
         options.add_experimental_option("prefs", {
             "download.default_directory": download_path,
