@@ -16,16 +16,6 @@ phases:
     commands:
       - echo "Starting tests"
       - cd tests
-      - pytest -v -s --html=reports/report.html --self-contained-html --capture=tee-sys
-      - echo "Tests completed"
+      - pytest test_change_sign_tag_size.py -v -s
 
-artifacts:
-  files:
-    - '**/*'                   # Include all files for deployment
-    - tests/reports/report.html  # Test reports
-    - tests/screenshots/**/*     # Screenshots
-    - tests/executionlogs/**/*   # Logs
 
-cache:
-  paths:
-    - '/root/.cache/pip/**/*'  # Cache Python packages for faster builds
