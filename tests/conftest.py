@@ -20,7 +20,7 @@ from pytest_html import extras as html
 
 
 def pytest_addoption(parser):
-    parser.addoption("--browser", action="store", default="edge")
+    parser.addoption("--browser", action="store", default="chrome")
 
 
 @pytest.fixture(scope='class')
