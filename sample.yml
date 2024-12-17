@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8  # Adjust based on your environment needs
+    commands:
+      - echo "Installing dependencies..."
+      - chmod +x commands.sh  # Grant execute permission to the .sh file
+
+  build:
+    commands:
+      - echo "Running the shell script..."
+      - ./commands.sh  # Execute the shell script
+
+artifacts:
+  files:
+    - '**/*'  # Optional: Upload all files after execution (if needed)
