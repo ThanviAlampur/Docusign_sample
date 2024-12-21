@@ -2,20 +2,15 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - echo "Installing Python 3.9 and dependencies"
-      - curl -sS https://bootstrap.pypa.io/get-pip.py | python3
-      - python3 -m pip install --upgrade pip
-      - pip install -r requirements.txt
-      - pip install selenium
-      - pip install pytest pytest-html
-      - pip install --upgrade webdriver_manager
-      - echo "Dependencies installed successfully"
-
+    runtime-versions:
+      python: 3.12
   build:
     commands:
-      - echo "Starting tests"
-      - cd tests
-      - pytest test_change_sign_tag_size.py -v -s
-
-
+      - echo "Triggering PowerShell script on EC2 instance"
+      - |
+        # Specify the EC2 instance ID
+        INSTANCE_ID="i-0364c315bbb057ef2"  # Replace with your EC2 instance ID
+        aws ssm send-command \
+          --instance-ids $INSTANCE_ID \
+          --document-name "AWS-RunPowerShellScript" \
+          --parameters 'commands=["powershell.exe -ExecutionPolicy Bypass -File C:\\Users\\Administrator\\Desktop\\run_tests.ps1"]'
