@@ -5,7 +5,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; `
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Install Git, Python, pip, and Edge
-choco install git python edge -y
+choco install git python -y
 
 # Add Python to PATH
 $env:Path += ";C:\Python39;C:\Python39\Scripts"
