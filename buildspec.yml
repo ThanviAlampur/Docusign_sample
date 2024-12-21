@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.x  # Adjust if necessary
+      python: 3.12  # Adjust if necessary
   build:
     commands:
       - echo "Triggering PowerShell script on EC2 instance"
@@ -15,4 +15,4 @@ phases:
         aws ssm send-command `
           --instance-ids $INSTANCE_ID `
           --document-name "AWS-RunPowerShellScript" `
-          --parameters @{commands="powershell.exe -ExecutionPolicy Bypass -File C:\Users\Administrator\Desktop\run_tests.ps1"}
+          --parameters "commands=powershell.exe -ExecutionPolicy Bypass -File C:\Users\Administrator\Desktop\run_tests.ps1"
