@@ -57,7 +57,7 @@ def test_setup(request):
         download_path = os.path.abspath(constants.download_path)
         edge_options = webdriver.EdgeOptions()
         edge_options.add_argument("--inprivate")
-        edge_options.headless = True
+        #edge_options.headless = True
         edge_options.add_experimental_option('prefs', {
             'download.default_directory': download_path,
             'download.prompt_for_download': False,
