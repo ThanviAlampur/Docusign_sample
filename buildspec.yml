@@ -3,28 +3,16 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.12
-  pre_build:
-    commands:
-      - echo Preparing to execute SSM command
+      python: 3.12  # Adjust if necessary
   build:
     commands:
-      - echo "Uploading and triggering PowerShell script on EC2 instance"
-      
-      # Specify the EC2 instance ID
-      - $INSTANCE_ID="i-0364c315bbb057ef2"  # Replace with your EC2 instance ID
-
-      # Run the AWS SSM send-command to trigger the PowerShell commands directly on EC2 instance
-      - aws ssm send-command \
-          --instance-ids $INSTANCE_ID \
-          --document-name "AWS-RunPowerShellScript" \
-          --parameters "commands=[\"powershell.exe -ExecutionPolicy Bypass -File https://awswindowsbucket.s3.us-east-1.amazonaws.com/ssm_script.ps1\"]"
-
-  post_build:
-    commands:
-      - echo "Script triggered successfully on EC2 instance"
-
-artifacts:
-  files:
-    - '**/*'
-  discard-paths: yes
+      - echo "Triggering PowerShell script on EC2 instance"
+      - |
+        # Specify the EC2 instance ID
+        $INSTANCE_ID = "i-0364c315bbb057ef2"  # Replace with your EC2 instance ID
+        
+        # Run the AWS SSM send-command to trigger the PowerShell script
+        aws ssm send-command `
+          --instance-ids $INSTANCE_ID `
+          --document-name "AWS-RunPowerShellScript" `
+          --parameters "commands=powershell.exe -ExecutionPolicy Bypass -File C:\Users\Administrator\Desktop\run_tests.ps1"
