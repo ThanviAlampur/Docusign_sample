@@ -4,11 +4,6 @@ phases:
   install:
     runtime-versions:
       python: 3.12
-    commands:
-      # Install dependencies for the EC2 instance setup
-      - echo Installing dependencies...
-      - pip install --upgrade pip
-      - pip install -r requirements.txt
   pre_build:
     commands:
       - echo Preparing to execute SSM command
@@ -19,22 +14,24 @@ phases:
         # Specify the EC2 instance ID
         INSTANCE_ID="i-0364c315bbb057ef2"  # Replace with your EC2 instance ID
 
+        # Prepare the command to be executed by AWS SSM
+        COMMAND="if (Test-Path 'C:\\Users\\Administrator\\Desktop\\Docusign_sample') { Remove-Item -Recurse -Force 'C:\\Users\\Administrator\\Desktop\\Docusign_sample' }
+                  git clone https://github.com/ThanviAlampur/Docusign_sample.git 'C:\\Users\\Administrator\\Desktop\\Docusign_sample'
+                  python.exe -m pip install --upgrade pip
+                  pip install -r 'C:\\Users\\Administrator\\Desktop\\Docusign_sample\\requirements.txt'
+                  pip install --upgrade numpy pandas
+                  pip install python-docx
+                  pip install webdriver-manager
+                  pip install selenium
+                  pip install pillow
+                  pytest 'C:\\Users\\Administrator\\Desktop\\Docusign_sample\\tests\\test_change_sign_tag_size.py' -v -s"
+
         # Run the AWS SSM send-command to trigger the PowerShell commands directly on EC2 instance
         aws ssm send-command \
           --instance-ids $INSTANCE_ID \
           --document-name "AWS-RunPowerShellScript" \
-          --parameters "commands=[
-            'if (Test-Path \"C:\\Users\\Administrator\\Desktop\\Docusign_sample\") { Remove-Item -Recurse -Force \"C:\\Users\\Administrator\\Desktop\\Docusign_sample\" }',
-            'git clone https://github.com/ThanviAlampur/Docusign_sample.git \"C:\\Users\\Administrator\\Desktop\\Docusign_sample\"',
-            'python.exe -m pip install --upgrade pip',
-            'pip install -r C:\\Users\\Administrator\\Desktop\\Docusign_sample\\requirements.txt',
-            'pip install --upgrade numpy pandas',
-            'pip install python-docx',
-            'pip install webdriver-manager',
-            'pip install selenium',
-            'pip install pillow',
-            'pytest C:\\Users\\Administrator\\Desktop\\Docusign_sample\\tests\\test_change_sign_tag_size.py -v -s'
-          ]"
+          --parameters "commands=[\"$COMMAND\"]"
+
   post_build:
     commands:
       - echo "Script triggered successfully on EC2 instance"
