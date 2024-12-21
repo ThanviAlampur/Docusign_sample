@@ -9,28 +9,18 @@ phases:
       - echo Preparing to execute SSM command
   build:
     commands:
-      - echo "Triggering PowerShell script on EC2 instance"
-      - |
-        # Specify the EC2 instance ID
-        INSTANCE_ID="i-0364c315bbb057ef2"  # Replace with your EC2 instance ID
+      - echo "Uploading and triggering PowerShell script on EC2 instance"
+      # Specify the EC2 instance ID
+      - INSTANCE_ID="i-0364c315bbb057ef2"  # Replace with your EC2 instance ID
+      
+      # Upload the PowerShell script to S3 (to be retrieved in the next step)
+      # - aws s3 cp ssm_script.ps1 s3://your-bucket-name/ssm_script.ps1
 
-        # Prepare the command to be executed by AWS SSM
-        COMMAND="if (Test-Path 'C:\\Users\\Administrator\\Desktop\\Docusign_sample') { Remove-Item -Recurse -Force 'C:\\Users\\Administrator\\Desktop\\Docusign_sample' }
-                  git clone https://github.com/ThanviAlampur/Docusign_sample.git 'C:\\Users\\Administrator\\Desktop\\Docusign_sample'
-                  python.exe -m pip install --upgrade pip
-                  pip install -r 'C:\\Users\\Administrator\\Desktop\\Docusign_sample\\requirements.txt'
-                  pip install --upgrade numpy pandas
-                  pip install python-docx
-                  pip install webdriver-manager
-                  pip install selenium
-                  pip install pillow
-                  pytest 'C:\\Users\\Administrator\\Desktop\\Docusign_sample\\tests\\test_change_sign_tag_size.py' -v -s"
-
-        # Run the AWS SSM send-command to trigger the PowerShell commands directly on EC2 instance
-        aws ssm send-command \
+      # Run the AWS SSM send-command to trigger the PowerShell commands directly on EC2 instance
+      - aws ssm send-command \
           --instance-ids $INSTANCE_ID \
           --document-name "AWS-RunPowerShellScript" \
-          --parameters "commands=[\"$COMMAND\"]"
+          --parameters "commands=[\"powershell.exe -ExecutionPolicy Bypass -File https://awswindowsbucket.s3.us-east-1.amazonaws.com/ssm_script.ps1\"]"
 
   post_build:
     commands:
