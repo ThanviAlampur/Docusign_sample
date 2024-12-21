@@ -10,11 +10,9 @@ phases:
   build:
     commands:
       - echo "Uploading and triggering PowerShell script on EC2 instance"
-      # Specify the EC2 instance ID
-      - INSTANCE_ID="i-0364c315bbb057ef2"  # Replace with your EC2 instance ID
       
-      # Upload the PowerShell script to S3 (to be retrieved in the next step)
-      # - aws s3 cp ssm_script.ps1 s3://your-bucket-name/ssm_script.ps1
+      # Specify the EC2 instance ID
+      - $INSTANCE_ID="i-0364c315bbb057ef2"  # Replace with your EC2 instance ID
 
       # Run the AWS SSM send-command to trigger the PowerShell commands directly on EC2 instance
       - aws ssm send-command \
